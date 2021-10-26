@@ -51,7 +51,7 @@
 }
 
 .owl-carousel .next-slide {
-    background: url(../assets/img/icons/next.svg) no-repeat scroll -24px 0px;
+    background: url(../assets/img/icons/next.svg) no-repeat scroll 0 0;
     right: -33px;
 }
 
