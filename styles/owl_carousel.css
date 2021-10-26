@@ -81,3 +81,9 @@ span.img-text {
 span.img-text:hover {
     color: #2caae1;
 }
+
+.owl-item.active {
+    max-width: 1094px;
+    position: relative;
+    z-index: 1;
+}

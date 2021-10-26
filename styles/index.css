@@ -929,6 +929,7 @@ header.sticky ul li a {
 }
 
 .testimony.container {
+    max-width: 1094px;
     position: relative;
     z-index: 1;
 }
