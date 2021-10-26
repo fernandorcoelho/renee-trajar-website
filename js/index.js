@@ -30,11 +30,13 @@ $(function() {
 // Sticky Header when Scrolling
 window.addEventListener("scroll", function() {
     const header = document.querySelector("header");
+    const chevron = document.getElementById("scroll-top-wrapper");
     header.classList.toggle("sticky", window.scrollY > 450);
+    chevron.classList.toggle("toggle", window.scrollY >= 4000);
 });
 
 // Smooth Scrolling Navigation
-document.querySelectorAll('header ul li a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
 
