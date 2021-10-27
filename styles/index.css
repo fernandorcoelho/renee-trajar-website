@@ -85,16 +85,16 @@ label {
 }
 
 .container {
-    max-width: 1162px;
+    max-width: 331px;
     margin: 0 auto;
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 50px 0;
+    padding: 42px 0;
 }
 
 a.btn {
-    width: 300px;
+    width: 100%;
     height: 50px;
     margin-top: 25px;
     display: flex;
@@ -151,7 +151,6 @@ a.btn.quinary-btn:hover {
 /* Sticky Header NavBar */
 
 header {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -159,9 +158,9 @@ header {
     justify-content: space-between;
     align-items: center;
     transition: .6s;
-    padding: 25px 40px 35px;
+    padding: 55px 115px;
     z-index: 999;
-    background: linear-gradient(180deg, #000000 29.73%, rgba(0, 0, 0, 0) 100%);
+    background: #0A0A0A;
 }
 
 header.sticky {
@@ -181,9 +180,15 @@ header .sticky-logo {
     transition: .6s;
 }
 
+.mobile-menu {
+    position: absolute;
+    right: 22px;
+    top: 27px;
+}
+
 header ul {
+    display: none;
     position: relative;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -222,7 +227,6 @@ header ul li a:hover {
 /* Hero Section */
 
 #hero {
-    height: 702px;
     background-image: url(../assets/img/hero/hero-banner.png);
     background-size: cover;
     background-position: top center;
@@ -231,22 +235,23 @@ header ul li a:hover {
 }
 
 #hero .hero {
-    align-items: start;
-    justify-content: end;
+    align-items: center;
+    justify-content: center;
     height: 100%;
 }
 
-#hero-text {
-    font-family: 'Lato', sans-serif;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #E5E5E5;
-    margin-top: 66px;
-    max-width: 400px;
+.hero.container {
+    padding-top: 0;
+    padding-bottom: 88px;
 }
 
-.hero.container {
-    min-height: 100vh;
+#hero-text {
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    color: #E5E5E5;
+    max-width: 400px;
+    margin-top: 146px;
 }
 
 #hero-heading {
@@ -255,16 +260,16 @@ header ul li a:hover {
 }
 
 #hero-heading h1 {
+    font-size: 72px;
     font-style: normal;
-    font-size: 90px;
     text-transform: uppercase;
     color: rgba(2, 75, 104, 0.68);
     line-height: 85%;
 }
 
 #hero-heading h2 {
+    font-size: 26px;
     font-style: italic;
-    font-size: 32px;
     color: #BE9667;
 }
 
@@ -282,23 +287,21 @@ header ul li a:hover {
 
 /* Renee Section */
 
-.renee {
-    display: flex;
-    flex-direction: row;
+.renee.container {
+    align-items: center;
 }
 
 .renee img {
-    height: 440px;
-    width: auto;
+    height: auto;
+    width: 210px;
     flex-shrink: 0;
 }
 
 .renee-wrapper {
-    height: 440px;
-    margin-left: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 25px;
 }
 
 .renee-wrapper h3 {
@@ -311,6 +314,9 @@ header ul li a:hover {
     font-weight: 300;
     font-size: 38px;
     color: #014561;
+    margin-bottom: 36px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .renee-wrapper h3::after {
@@ -354,6 +360,7 @@ header ul li a:hover {
 .renee-wrapper .renee-cite {
     position: relative;
     font-family: 'Cormorant', sans-serif;
+    margin-top: 7px;
 }
 
 .renee-wrapper .renee-cite cite {
@@ -364,9 +371,11 @@ header ul li a:hover {
     font-size: 24px;
     color: #1C86A4;
     line-height: 34px;
+    text-align: center;
 }
 
 .renee-wrapper .renee-cite img {
+    display: none;
     position: absolute;
     height: 123px;
     width: auto;
@@ -377,15 +386,14 @@ header ul li a:hover {
 
 .renee-wrapper .renee-cite .renee-cite-author {
     width: 100%;
-    justify-self: end;
     font-weight: 500;
     font-size: 20px;
     color: #828282;
-    text-align: end;
+    text-align: center;
 }
 
 .renee-wrapper a.btn.secondary-btn {
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 
@@ -397,18 +405,8 @@ header ul li a:hover {
 #nelson {
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     background-color: #EFF7F9;
-    background-image: url(../assets/img/hero/tailor-bg.png);
-    background-repeat: no-repeat;
-    background-position: top -28px right 313px;
-    background-size: 70%;
-}
-
-.nelson.container {
-    max-width: 630px;
-    min-height: 360px;
-    justify-content: flex-end;
 }
 
 .nelson p {
@@ -426,7 +424,7 @@ header ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 47px;
+    margin-top: 21px;
 }
 
 .nelson .nelson-wrapper h6 {
@@ -444,12 +442,16 @@ header ul li a:hover {
     font-weight: 300;
     font-size: 20px;
     color: #BE9667;
+    text-align: center;
 }
 
 #nelson #alt-nelson-img {
     position: relative;
     display: flex;
     z-index: 0;
+    width: 376px;
+    height: auto;
+    justify-content: flex-end;
 }
 
 #nelson #alt-nelson-img::after {
@@ -466,15 +468,15 @@ header ul li a:hover {
 
 #nelson-hero-img {
     position: absolute;
-    height: 320px;
-    width: auto;
+    top: 98px;
+    left: 22px;
+    height: auto;
+    width: 157px;
     flex-shrink: 0;
-    right: 270px;
     z-index: 2;
-    top: 50%;
-    transform: translateY(-50%) rotate(7.42deg);
     border: 8px solid white;
     filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+    transform: rotate(7.42deg);
 }
 
 
@@ -482,6 +484,10 @@ header ul li a:hover {
 
 
 /* Authority Section */
+
+#authority {
+    display: none;
+}
 
 .authority.container {
     max-width: 1140px;
@@ -575,8 +581,6 @@ header ul li a:hover {
 }
 
 .sale-wrapper {
-    padding: 30px 0px;
-    margin-right: 55px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -598,8 +602,8 @@ header ul li a:hover {
     font-family: 'Cormorant', sans-serif;
     font-style: italic;
     font-weight: normal;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 28px;
+    line-height: 34px;
     color: #BE9667;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -613,8 +617,8 @@ header ul li a:hover {
     font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 20px;
+    line-height: 24px;
     color: #C4C4C4;
 }
 
@@ -631,6 +635,7 @@ header ul li a:hover {
 }
 
 .sale.container img {
+    display: none;
     height: 560px;
     width: auto;
     flex-shrink: 0;
@@ -643,48 +648,29 @@ header ul li a:hover {
 /* Shirt Production Section */
 
 .shirt.container {
-    padding: 100px 0 50px;
-    flex-direction: row;
+    border-bottom: 1px solid #C4C4C4;
 }
 
 .shirt.container .shirt-img-wrapper {
     position: relative;
     width: 100%;
-    height: 488px;
-}
-
-.shirt.container .shirt-img-wrapper::after {
-    position: absolute;
-    content: '';
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    transition: background-color 1s;
-}
-
-.shirt.container .shirt-img-wrapper:hover::after {
-    background-color: rgba(0, 26, 36, 0.61);
-}
-
-.shirt.container .shirt-img-wrapper:hover .shirt-img img {
-    transform: scale(1.02) translate(-3px, -3px);
+    height: auto;
+    text-align: center;
 }
 
 .shirt.container .shirt-img-wrapper img {
-    height: 488px;
-    width: 100%;
+    height: auto;
+    width: 318px;
     flex-shrink: 0;
     transition: transform 1s;
 }
 
 .shirt.container .shirt-img-wrapper .shirt-border {
     position: absolute;
-    width: calc(100% + 20px);
-    height: calc(100% - 24px);
-    top: 50%;
-    right: -10px;
-    transform: translateY(-50%);
+    width: calc(100% + 2px);
+    height: calc(100% - 21px);
+    top: 8px;
+    right: -2px;
     border: 1px solid #1C86A4;
     z-index: 1;
 }
@@ -694,21 +680,12 @@ header ul li a:hover {
     overflow: hidden;
 }
 
-.shirt-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-}
-
 .shirt-wrapper .shirt-content {
-    border: 1px solid #E5E5E5;
-    border-left: none;
+    margin-top: 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 57px 31px 37px 72px;
     height: fit-content;
     place-self: center;
 }
@@ -717,8 +694,8 @@ header ul li a:hover {
     font-family: 'Cormorant', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 62px;
-    line-height: 75px;
+    font-size: 50px;
+    line-height: 61px;
     text-transform: uppercase;
     color: #014561;
 }
@@ -727,8 +704,8 @@ header ul li a:hover {
     font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 17px;
     text-transform: uppercase;
     color: #C4C4C4;
 }
@@ -739,10 +716,9 @@ header ul li a:hover {
 
 .shirt-wrapper .shirt-content .shirt-lists {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
-    margin: 31px 0 34px;
+    margin-top: 20px;
 }
 
 .shirt-wrapper .shirt-content .shirt-lists .shirt-list li::marker {
@@ -758,9 +734,13 @@ header ul li a:hover {
     font-family: 'Cormorant', sans-serif;
     font-style: italic;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 22px;
+    line-height: 27px;
     color: #727272;
+}
+
+.shirt-wrapper .shirt-content a {
+    display: none;
 }
 
 
@@ -770,47 +750,29 @@ header ul li a:hover {
 /* Sleeves Production Section */
 
 .sleeves.container {
-    flex-direction: row;
+    border-bottom: 1px solid #C4C4C4;
 }
 
 .sleeves.container .sleeves-img-wrapper {
     position: relative;
     width: 100%;
-    height: 488px;
-}
-
-.sleeves.container .sleeves-img-wrapper::after {
-    position: absolute;
-    content: '';
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    transition: background-color 1s;
-}
-
-.sleeves.container .sleeves-img-wrapper:hover::after {
-    background-color: rgba(0, 26, 36, 0.61);
-}
-
-.sleeves.container .sleeves-img-wrapper:hover .sleeves-img img {
-    transform: scale(1.02) translate(-3px, -3px);
+    height: auto;
+    text-align: center;
 }
 
 .sleeves.container .sleeves-img-wrapper img {
-    height: 488px;
-    width: 100%;
+    height: auto;
+    width: 318px;
     flex-shrink: 0;
     transition: transform 1s;
 }
 
 .sleeves.container .sleeves-img-wrapper .sleeves-border {
     position: absolute;
-    width: calc(100% + 20px);
-    height: calc(100% - 24px);
-    top: 50%;
-    right: -10px;
-    transform: translateY(-50%);
+    width: calc(100% + 2px);
+    height: calc(100% - 21px);
+    top: 8px;
+    right: -2px;
     border: 1px solid #1C86A4;
     z-index: 1;
 }
@@ -822,19 +784,15 @@ header ul li a:hover {
 
 .sleeves-wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column-reverse;
 }
 
 .sleeves-wrapper .sleeves-content {
-    border: 1px solid #E5E5E5;
-    border-right: none;
+    margin-top: 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 57px 31px 37px 72px;
     height: fit-content;
     place-self: center;
 }
@@ -843,8 +801,8 @@ header ul li a:hover {
     font-family: 'Cormorant', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 62px;
-    line-height: 75px;
+    font-size: 50px;
+    line-height: 61px;
     text-transform: uppercase;
     color: #014561;
 }
@@ -853,8 +811,8 @@ header ul li a:hover {
     font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 17px;
     text-transform: uppercase;
     color: #C4C4C4;
 }
@@ -865,10 +823,9 @@ header ul li a:hover {
 
 .sleeves-wrapper .sleeves-content .sleeves-lists {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
-    margin: 31px 0 34px;
+    margin-top: 20px;
 }
 
 .sleeves-wrapper .sleeves-content .sleeves-lists .sleeves-list li::marker {
@@ -884,8 +841,8 @@ header ul li a:hover {
     font-family: 'Cormorant', sans-serif;
     font-style: italic;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 22px;
+    line-height: 27px;
     color: #727272;
 }
 
@@ -1154,6 +1111,298 @@ header ul li a:hover {
 /* End Footer */
 
 
+/* Responsiveness */
+
+@media (min-width: 1024px) {
+    /* General Styles */
+    header {
+        position: fixed;
+        background: linear-gradient(180deg, #000000 29.73%, rgba(0, 0, 0, 0) 100%);
+        padding: 25px 40px 35px;
+    }
+    header ul {
+        display: flex;
+    }
+    .mobile-menu {
+        display: none;
+    }
+    .container {
+        max-width: 1162px;
+        padding: 50px 0;
+    }
+    a.btn {
+        width: 300px;
+    }
+    /* End General Styles */
+    /* Hero Section */
+    #hero {
+        height: 702px;
+    }
+    #hero .hero {
+        align-items: start;
+        justify-content: end;
+    }
+    .hero.container {
+        min-height: 100vh;
+        padding: 42px 0px;
+    }
+    #hero-heading h2 {
+        font-size: 32px;
+    }
+    #hero-heading h1 {
+        font-size: 90px;
+    }
+    #hero-text {
+        font-size: 24px;
+        margin-top: 66px;
+    }
+    /* End Hero Section */
+    /* Renee Section */
+    .renee {
+        flex-direction: row;
+    }
+    .renee img {
+        width: 370px;
+    }
+    .renee-wrapper {
+        height: 440px;
+        margin-left: 100px;
+        margin-top: 0;
+    }
+    .renee-wrapper h3 {
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+    .renee-wrapper .renee-cite {
+        margin-top: 0;
+    }
+    .renee-wrapper .renee-cite cite {
+        text-align: left;
+    }
+    .renee-wrapper .renee-cite img {
+        display: block;
+    }
+    .renee-wrapper .renee-cite .renee-cite-author {
+        text-align: end;
+    }
+    .renee-wrapper a.btn.secondary-btn {
+        margin-top: 10px;
+    }
+    /* End Renee Section */
+    /* Nelson Section */
+    #nelson {
+        flex-direction: row;
+        background-image: url(../assets/img/hero/tailor-bg.png);
+        background-repeat: no-repeat;
+        background-position: top -28px right 313px;
+        background-size: 70%;
+    }
+    .nelson.container {
+        max-width: 630px;
+        min-height: 360px;
+        justify-content: flex-end;
+    }
+    #nelson #alt-nelson-img {
+        width: 313px;
+    }
+    .nelson .nelson-wrapper {
+        margin-top: 47px;
+    }
+    #nelson-hero-img {
+        width: 218px;
+        top: 50%;
+        right: 270px;
+        left: auto;
+        transform: translateY(-50%) rotate(7.42deg);
+    }
+    /* End Nelson Section */
+    /* Authority Section */
+    #authority {
+        display: block;
+    }
+    /* End Authority Section */
+    /* Start Sale Section */
+    .sale-wrapper {
+        padding: 30px 0px;
+        margin-right: 55px;
+    }
+    .sale-wrapper .sale-content .sale-list li {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .sale-wrapper .sale-content .sale-list h3 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .sale.container img {
+        display: block;
+    }
+    /* End Sale Section */
+    /* Shirt Section */
+    .shirt-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .shirt-wrapper .shirt-content {
+        margin-top: 0;
+        padding: 37px 31px 37px 72px;
+    }
+    .shirt-wrapper .shirt-content h1 {
+        font-size: 62px;
+        line-height: 75px;
+    }
+    .shirt-wrapper .shirt-content h6 {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .shirt-wrapper .shirt-content .shirt-lists {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin: 31px 0 34px;
+    }
+    .shirt-wrapper .shirt-content .shirt-lists .shirt-list li {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .shirt.container {
+        border-bottom: none;
+    }
+    .shirt.container .shirt-img-wrapper {
+        width: auto;
+        height: 488px;
+        text-align: start;
+    }
+    .shirt.container .shirt-img-wrapper .shirt-border {
+        width: calc(100% + 20px);
+        height: calc(100% - 15px);
+        top: 12px;
+        right: -10px;
+        transform: translateY(0);
+    }
+    .shirt.container .shirt-img-wrapper img {
+        width: 540px;
+    }
+    .shirt.container .shirt-img-wrapper::after {
+        position: absolute;
+        content: '';
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        transition: background-color 1s;
+    }
+    .shirt.container .shirt-img-wrapper:hover::after {
+        background-color: rgba(0, 26, 36, 0.61);
+    }
+    .shirt.container .shirt-img-wrapper:hover .shirt-img img {
+        transform: scale(1.02) translate(-3px, -3px);
+    }
+    .shirt-wrapper .shirt-content {
+        border: 1px solid #E5E5E5;
+        border-left: none;
+    }
+    .shirt-wrapper .shirt-content a {
+        display: flex;
+    }
+    /* End Shirt Section */
+    /* Sleeves Section */
+    .sleeves-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .sleeves-wrapper .sleeves-content {
+        margin-top: 0;
+        padding: 37px 72px 37px 31px;
+    }
+    .sleeves-wrapper .sleeves-content h1 {
+        font-size: 62px;
+        line-height: 75px;
+    }
+    .sleeves-wrapper .sleeves-content h6 {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .sleeves-wrapper .sleeves-content .sleeves-lists {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin: 31px 0 34px;
+    }
+    .sleeves-wrapper .sleeves-content .sleeves-lists .sleeves-list li {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .sleeves.container {
+        border-bottom: none;
+    }
+    .sleeves.container .sleeves-img-wrapper {
+        width: auto;
+        height: 488px;
+        text-align: start;
+    }
+    .sleeves.container .sleeves-img-wrapper .sleeves-border {
+        width: calc(100% + 20px);
+        height: calc(100% - 15px);
+        top: 12px;
+        right: -10px;
+        transform: translateY(0);
+    }
+    .sleeves.container .sleeves-img-wrapper img {
+        width: 540px;
+    }
+    .sleeves.container .sleeves-img-wrapper::after {
+        position: absolute;
+        content: '';
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        transition: background-color 1s;
+    }
+    .sleeves.container .sleeves-img-wrapper:hover::after {
+        background-color: rgba(0, 26, 36, 0.61);
+    }
+    .sleeves.container .sleeves-img-wrapper:hover .sleeves-img img {
+        transform: scale(1.02) translate(-3px, -3px);
+    }
+    .sleeves-wrapper .sleeves-content {
+        border: 1px solid #E5E5E5;
+        border-right: none;
+    }
+    /* End Sleeves Section */
+    /* Miscellaneous Styles */
+    .fade {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.9s ease-out, transform 1.5s ease-out;
+        will-change: opacity, visibility;
+    }
+    .fade-up {
+        transform: translateY(20vh);
+    }
+    .fade-left {
+        transform: translateX(-20vw);
+    }
+    .fade-right {
+        transform: translateX(20vw);
+    }
+    .fade.is-visible {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+    }
+    /* End Miscellaneous Styles */
+}
+
+
+/* End Responsiveness */
+
+
 /* Miscellaneous Styles */
 
 .floating-wpp {
@@ -1185,29 +1434,4 @@ header ul li a:hover {
 
 #scroll-top-wrapper.toggle {
     display: block;
-}
-
-.fade {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.9s ease-out, transform 1.5s ease-out;
-    will-change: opacity, visibility;
-}
-
-.fade-up {
-    transform: translateY(20vh);
-}
-
-.fade-left {
-    transform: translateX(-20vw);
-}
-
-.fade-right {
-    transform: translateX(20vw);
-}
-
-.fade.is-visible {
-    opacity: 1;
-    transform: none;
-    visibility: visible;
 }
