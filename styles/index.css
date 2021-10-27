@@ -148,7 +148,7 @@ a.btn.quinary-btn:hover {
 }
 
 
-/* Sticky NavBar */
+/* Sticky Header NavBar */
 
 header {
     position: fixed;
@@ -202,16 +202,21 @@ header ul li a {
     font-size: 16px;
     line-height: 19px;
     text-transform: uppercase;
-    color: #949494;
     transition: .6s;
 }
 
-header.sticky ul li a {
+header.sticky ul li a,
+header ul li a {
     color: #949494;
 }
 
+header.sticky ul li a:hover,
+header ul li a:hover {
+    color: #00648C;
+}
 
-/* End Sticky NavBar */
+
+/* End Sticky Header NavBar */
 
 
 /* Hero Section */
