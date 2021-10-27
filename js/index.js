@@ -46,6 +46,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Fade In Effect
 $(window).scroll(function() {
     $('.fade').each(function() {
         var topOfElement = $(this).offset().top;
@@ -59,6 +60,7 @@ $(window).scroll(function() {
     });
 });
 
+// Toggle Side Menu
 $(document).ready(function() {
     var $toggleButton = $('.toggle-button'),
         $menuWrap = $('.menu-wrap');
