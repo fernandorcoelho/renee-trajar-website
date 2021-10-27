@@ -27,7 +27,7 @@ $(function() {
     });
 });
 
-// Sticky Header when Scrolling
+// Sticky Header & Scroll to Top when Scrolling
 window.addEventListener("scroll", function() {
     const header = document.querySelector("header");
     const chevron = document.getElementById("scroll-top-wrapper");
@@ -43,5 +43,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
+    });
+});
+
+$(window).scroll(function() {
+    $('.fade').each(function() {
+        var topOfElement = $(this).offset().top;
+        var bottomOfElement = $(this).offset().top + $(this).outerHeight();
+        var bottomOfScreen = $(window).scrollTop() + $(window).innerHeight();
+        var topOfScreen = $(window).scrollTop();
+
+        if ((bottomOfScreen > topOfElement) && (topOfScreen < bottomOfElement) && !$(this).hasClass('is-visible')) {
+            $(this).addClass('is-visible');
+        }
     });
 });
