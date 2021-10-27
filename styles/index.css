@@ -891,7 +891,6 @@ header ul li a:hover {
 }
 
 .testimony.container {
-    max-width: 1094px;
     position: relative;
     z-index: 1;
 }
@@ -982,7 +981,7 @@ header ul li a:hover {
 /* Footer */
 
 .footer.container {
-    max-width: 970px;
+    padding: 30px 0;
 }
 
 .footer.container h3 {
@@ -1016,9 +1015,13 @@ header ul li a:hover {
 }
 
 .footer-wrapper {
-    display: grid;
-    grid-template-columns: 3fr 6fr;
-    gap: 130px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.footer-wrapper .footer-left {
+    text-align: center;
+    margin-top: 45px;
 }
 
 .footer-left,
@@ -1047,13 +1050,17 @@ header ul li a:hover {
     font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 27px;
     color: #828282;
 }
 
 .footer-info .phones {
-    margin-bottom: 17px;
+    margin-bottom: 23px;
+}
+
+.footer-info .email {
+    margin-bottom: 43px;
 }
 
 .footer-service h6 {
@@ -1067,20 +1074,17 @@ header ul li a:hover {
 }
 
 .footer-copy {
-    margin-top: 84px;
-    padding-top: 30px;
-    border-top: 1px solid #BE9667;
+    margin-top: 0;
 }
 
 .footer-copy .footer.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    border-top: 1px solid #BE9667;
+    margin-bottom: 50px;
 }
 
 .footer-copy .footer .footer-branding {
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -1095,6 +1099,7 @@ header ul li a:hover {
     font-size: 14px;
     line-height: 21px;
     color: #BDBDBD;
+    margin: 15px 0;
 }
 
 .footer-copy .footer p {
@@ -1375,6 +1380,51 @@ header ul li a:hover {
         border-right: none;
     }
     /* End Sleeves Section */
+    /* Testimony Section */
+    .testimony.container {
+        max-width: 1094px;
+    }
+    /* End Section */
+    /* Footer */
+    .footer.container {
+        max-width: 970px;
+        padding: 50px 0;
+    }
+    .footer-wrapper {
+        display: grid;
+        grid-template-columns: 3fr 6fr;
+        gap: 130px;
+    }
+    .footer-wrapper .footer-left {
+        text-align: left;
+        margin-top: 0;
+    }
+    .footer-info p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .footer-info .phones {
+        margin-bottom: 17px;
+    }
+    .footer-info .email {
+        margin-bottom: 0;
+    }
+    .footer-copy {
+        margin-top: 34px;
+        border-top: 1px solid #BE9667;
+    }
+    .footer-copy .footer.container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        border: none;
+        margin-bottom: 0;
+    }
+    .footer-copy .footer .footer-branding p {
+        margin: 0;
+    }
+    /* End Footer */
     /* Miscellaneous Styles */
     .fade {
         opacity: 0;
