@@ -23,6 +23,7 @@
 .owl-theme .owl-dots .owl-dot.active span {
     width: 14px;
     height: 14px;
+    transform: translateY(2px);
     background: #014561;
 }
 
@@ -31,12 +32,11 @@
 }
 
 .owl-carousel .nav-btn {
-    height: 47px;
+    height: 53px;
     position: absolute;
     width: 26px;
     cursor: pointer;
-    top: 50% !important;
-    transform: translateY(-50%);
+    bottom: -12px;
 }
 
 .owl-carousel .owl-prev.disabled,
@@ -47,12 +47,12 @@
 
 .owl-carousel .prev-slide {
     background: url(../assets/img/icons/prev.svg) no-repeat scroll 0 0;
-    left: -33px;
+    left: 50px;
 }
 
 .owl-carousel .next-slide {
     background: url(../assets/img/icons/next.svg) no-repeat scroll 0 0;
-    right: -33px;
+    right: 50px;
 }
 
 
@@ -87,3 +87,23 @@ span.img-text:hover {
     position: relative;
     z-index: 1;
 }
+
+
+/* Media Query */
+
+@media (min-width: 1024px) {
+    .owl-carousel .prev-slide {
+        left: -33px;
+    }
+    .owl-carousel .next-slide {
+        right: -33px;
+    }
+    .owl-carousel .nav-btn {
+        cursor: pointer;
+        top: 50% !important;
+        transform: translateY(-50%);
+    }
+}
+
+
+/* End Media Query */

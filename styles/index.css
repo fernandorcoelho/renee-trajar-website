@@ -1116,7 +1116,7 @@ header ul li a:hover {
 /* End Footer */
 
 
-/* Responsiveness */
+/* Media Query */
 
 @media (min-width: 1024px) {
     /* General Styles */
@@ -1450,7 +1450,7 @@ header ul li a:hover {
 }
 
 
-/* End Responsiveness */
+/* End Media Query */
 
 
 /* Miscellaneous Styles */
